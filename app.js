@@ -5,6 +5,20 @@ const toLangLabel = document.getElementById('to-lang');
 const inputTextDisplay = document.getElementById('input-text');
 const outputTextDisplay = document.getElementById('output-text');
 const statusText = document.getElementById('status-text');
+const liveSubtitle = document.getElementById('live-translation');
+const video = document.getElementById('webcam');
+
+// Initialize Camera
+async function initCamera() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+    } catch (err) {
+        console.error("Error accessing webcam:", err);
+        statusText.innerText = "Camera access denied. Please allow camera to see your face!";
+    }
+}
+initCamera();
 
 let isListening = false;
 let recognition;
@@ -111,7 +125,9 @@ async function translateText(text) {
         const data = await response.json();
         
         if (data.responseData && data.responseData.translatedText) {
-            outputTextDisplay.innerText = data.responseData.translatedText;
+            const translated = data.responseData.translatedText;
+            outputTextDisplay.innerText = translated;
+            liveSubtitle.innerText = translated; // Update video overlay
             statusText.innerText = "Listening...";
         } else {
             throw new Error("Translation failed");
