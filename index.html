@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XAMK KÄÄNTÄJÄ | Real-Time Voice Translation</title>
-    <meta name="description" content="A premium real-time voice translation app for English and Finnish. Experience seamless, low-latency communication.">
+    <meta name="description"
+        content="A premium real-time voice translation app for English and Finnish. Experience seamless, low-latency communication.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="background-overlay"></div>
-    
+
     <main class="app-container">
         <header>
-            <h1 class="logo">XAMK<span> KÄÄNTÄJÄ</span></h1>
+            <h1 class="logo">FIN-ENG<span> KÄÄNTÄJÄ</span></h1>
             <p class="subtitle">Real-time voice-to-voice bridge</p>
         </header>
 
@@ -37,7 +40,12 @@
             <div class="status-indicator">
                 <div class="pulse-ring" id="mic-pulse"></div>
                 <button id="mic-btn" class="mic-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" x2="12" y1="19" y2="22" />
+                    </svg>
                 </button>
                 <span id="status-text">Click to Start Listening</span>
             </div>
@@ -61,4 +69,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
