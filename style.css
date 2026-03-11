@@ -77,7 +77,7 @@ header {
 
 .logo span {
     font-weight: 300;
-    opacity: 0.8;
+    opacity: 1; /* Made fully visible */
 }
 
 .subtitle {
